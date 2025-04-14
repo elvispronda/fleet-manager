@@ -1,0 +1,36 @@
+# --- Core FastAPI ---
+fastapi==0.110.0
+uvicorn[standard]==0.29.0  # Includes logging, reload, watchgod, etc.
+
+# --- ORM and Database ---
+sqlalchemy==2.0.28
+psycopg2-binary==2.9.9     # PostgreSQL driver
+
+# --- Data Validation & Serialization ---
+pydantic==2.6.4
+pydantic-settings==2.2.1   # For .env config with Pydantic
+
+# --- Auth & Security ---
+python-jose[cryptography]==3.3.0  # JWT
+passlib[bcrypt]==1.7.4            # Password hashing
+
+# --- Environment & Config ---
+python-dotenv==1.0.1
+
+# --- CORS (Cross-Origin Resource Sharing) ---
+starlette==0.36.3                # FastAPI is based on Starlette, CORS included
+
+# --- Migrations (Optional but recommended) ---
+alembic==1.13.1
+
+# --- Testing ---
+httpx==0.27.0
+pytest==8.1.1
+
+# --- Typing ---
+typing-extensions>=4.0.0
+
+# --- Linting (Optional Dev Tools) ---
+black==24.3.0
+flake8==7.0.0
+isort==5.13.2
