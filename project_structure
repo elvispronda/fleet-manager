@@ -1,0 +1,43 @@
+fleet_manager/
+├── app/
+│   ├── main.py               # Entry point for the FastAPI app
+│   ├── config.py             # Configuration settings (PostgreSQL URL, JWT settings)
+│   ├── database.py           # Database connection setup using SQLAlchemy
+│   ├── models/               # Folder for database models
+│   │   ├── user.py           # User model (Driver)
+│   │   ├── vehicle.py        # Vehicle model
+│   │   ├── trip.py           # Trip model
+│   │   ├── fuel.py           # Fuel record model
+│   │   ├── maintenance.py    # Maintenance record model
+│   │   ├── fuel_log.py       # Fuel log record model
+│   │   └── budget.py         # Budget & Cost tracking model
+│   ├── schemas/              # Folder for Pydantic schemas
+│   │   ├── user.py           # User schema
+│   │   ├── vehicle.py        # Vehicle schema
+│   │   ├── trip.py           # Trip schema
+│   │   ├── fuel.py           # Fuel schema
+│   │   ├── maintenance.py    # Maintenance schema
+│   │   ├── fuel_log.py       # Fuel log schema
+│   │   └── budget.py         # Budget & Cost tracking schema
+│   ├── crud/                 # Folder for CRUD operations
+│   │   ├── auth.py           # Authentication CRUD operations
+│   │   ├── vehicle.py        # Vehicle CRUD operations
+│   │   ├── trip.py           # Trip CRUD operations
+│   │   ├── fuel.py           # Fuel CRUD operations
+│   │   ├── maintenance.py    # Maintenance CRUD operations
+│   │   ├── fuel_log.py       # Fuel log CRUD operations
+│   │   └── budget.py         # Budget & Cost tracking CRUD operations
+│   ├── api/                  # Folder for FastAPI routes (APIRouter)
+│   │   ├── auth.py           # Authentication routes
+│   │   ├── vehicle.py        # Vehicle routes
+│   │   ├── trip.py           # Trip routes
+│   │   ├── fuel.py           # Fuel routes
+│   │   ├── maintenance.py    # Maintenance routes
+│   │   ├── fuel_log.py       # Fuel log routes
+│   │   └── budget.py         # Budget & Cost tracking routes
+│   ├── auth/                 # Folder for JWT auth logic
+│   │   ├── jwt_handler.py    # JWT handling logic
+│   │   └── dependencies.py   # Dependencies for getting the current user (auth)
+├── requirements.txt          # List of dependencies (FastAPI, SQLAlchemy, etc.)
+└── .env                      # Environment variables (e.g., DATABASE_URL, SECRET_KEY)
+
